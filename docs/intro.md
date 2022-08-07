@@ -2,46 +2,51 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+## Features
 
-Let's discover **Docusaurus in less than 5 minutes**.
+- Quickly build React apps with annotation
+- Render separated, the rendering module can be used separately
 
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
+## Install
 
 ```bash
-npm init docusaurus@latest my-website classic
+# npm
+npm install @labelbee/lb-annotation
+npm install @labelbee/lb-components
+
+# yarn
+yarn add @labelbee/lb-annotation
+yarn add @labelbee/lb-components
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## Usage
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Quick Start Example
 
-## Start your site
+```js
+import React from "react";
+import ReactDOM from "react-dom";
+import { AnnotationView } from "@labelbee/lb-components";
 
-Run the development server:
+const src = "";
 
-```bash
-cd my-website
-npm run start
+const DefaultComponent = () => {
+  return <AnnotationView src={src} />;
+};
+
+ReactDOM.render(<App />, document.querySelector("#app"));
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## Documents
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+- [JavaScript Canvas Library - LB-Annotation](./packages/lb-annotation/README_en-US.md)
+- [Annotation Components - LB-components](./packages/lb-components/README_en-US.md)
+- [DEMO](./packages/lb-demo/README.md)
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## Links
+
+- [LabelBee-Client](https://github.com/open-mmlab/labelbee-client)（Powered by LabelBee）
+
+## LICENSE
+
+This project is released under the [Apache 2.0 license](./LICENSE).
